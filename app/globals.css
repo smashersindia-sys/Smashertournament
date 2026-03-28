@@ -1,0 +1,197 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  /* Smashers colors */
+  --color-smash-green: #2E7D32;
+  --color-smash-green-dark: #1B5E20;
+  --color-smash-green-soft: #F0FDF4;
+  --color-smash-gray-bg: #F9FAFB;
+}
+
+:root {
+  --background: oklch(1 0 0);
+  /* #FFFFFF */
+  --foreground: oklch(0.145 0.013 255.43);
+  /* #111827 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0.013 255.43);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0.013 255.43);
+  --primary: oklch(0.442 0.117 148.3);
+  /* #2E7D32 */
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.968 0.004 106.4);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.968 0.004 106.4);
+  --muted-foreground: oklch(0.447 0.013 255.43);
+  /* #4B5563 */
+  --accent: oklch(0.985 0.01 148.3);
+  /* Green-50ish */
+  --accent-foreground: oklch(0.442 0.117 148.3);
+  --destructive: oklch(0.577 0.245 27.325);
+  /* #ef4444 */
+  --border: oklch(0.96 0.004 106.4);
+  /* #F3F4F6 */
+  --input: oklch(0.96 0.004 106.4);
+  --ring: oklch(0.442 0.117 148.3);
+  --radius: 0.75rem;
+
+  --sidebar: oklch(0.985 0.01 247.83);
+  /* #F9FAFB */
+  --sidebar-foreground: oklch(0.447 0.013 255.43);
+  /* #4B5563 */
+  --sidebar-primary: oklch(0.442 0.117 148.3);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.968 0.015 148.3);
+  /* Green-50 shade */
+  --sidebar-accent-foreground: oklch(0.442 0.117 148.3);
+  --sidebar-border: oklch(0.96 0.004 106.4);
+  /* #F3F4F6 */
+  --sidebar-ring: oklch(0.442 0.117 148.3);
+}
+
+.dark {
+  --background: oklch(0.145 0.013 255.43);
+  --foreground: oklch(0.985 0.002 247.83);
+  --card: oklch(0.145 0.013 255.43);
+  --card-foreground: oklch(0.985 0.002 247.83);
+  --popover: oklch(0.145 0.013 255.43);
+  --popover-foreground: oklch(0.985 0.002 247.83);
+  --primary: oklch(0.442 0.117 148.3);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.25 0.013 255.43);
+  --secondary-foreground: oklch(0.985 0.002 247.83);
+  --muted: oklch(0.25 0.013 255.43);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.25 0.013 255.43);
+  --accent-foreground: oklch(0.985 0.002 247.83);
+  --destructive: oklch(0.396 0.141 25.723);
+  --border: oklch(0.25 0.013 255.43);
+  --input: oklch(0.25 0.013 255.43);
+  --ring: oklch(0.442 0.117 148.3);
+  --sidebar: oklch(0.145 0.013 255.43);
+  --sidebar-foreground: oklch(0.708 0 0);
+  --sidebar-primary: oklch(0.442 0.117 148.3);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.25 0.013 255.43);
+  --sidebar-accent-foreground: oklch(0.985 0.002 247.83);
+  --sidebar-border: oklch(0.25 0.013 255.43);
+  --sidebar-ring: oklch(0.442 0.117 148.3);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    @apply font-sans;
+  }
+}
+
+/* ---- Smashers custom utility classes ---- */
+.payment-paid-upi {
+  @apply bg-green-100 text-green-800;
+}
+
+.payment-paid-cash {
+  @apply bg-teal-100 text-teal-800;
+}
+
+.payment-pending {
+  @apply bg-red-100 text-red-800;
+}
+
+.payment-waived {
+  @apply bg-gray-100 text-gray-600;
+}
+
+.status-upcoming {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-active {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-completed {
+  @apply bg-gray-100 text-gray-600;
+}
+
+/* Bracket connector lines */
+.bracket-connector {
+  position: relative;
+}
+
+.bracket-connector::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #d1d5db;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 3px;
+}
